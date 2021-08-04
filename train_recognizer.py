@@ -62,8 +62,6 @@ else:
     print("[INFO] new learning rate: {}".format(
         K.get_value(model.optimizer.lr)))
 
-# figPath = os.path.sep.join([config.OUTPUT_PATH, "vggnet_emotion.png"])
-# jsonPath = os.path.sep.join([config.OUTPUT_PATH, "vggnet_emotion.json"])
 log_dir = os.path.sep.join([config.OUTPUT_PATH, "logs/fit", datetime.datetime.now().strftime("%Y%m%d-%H%M%S")])
 callbacks = [
     ModelCheckpoint(args["checkpoint"], verbose=1),
